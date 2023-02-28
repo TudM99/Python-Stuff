@@ -6,7 +6,7 @@ def volume(r):
 print ("The sphere's radius = ", end="") 
 
 r = int(input())
-while r == 0:
+while r <= 0:
 	print ("The sphere's variable must be positive")
 	print ("Please re-enter the value: ", end="")
 	r = int(input())
