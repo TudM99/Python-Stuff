@@ -7,5 +7,5 @@ data = phrases.read()
 listdata = data.split("\n")
 k = 1
 while k == 1:
-    time.sleep(3)
+    time.sleep(random.randint(10, 60))
     messagebox.showinfo("Your annoying friend says:", random.choice(listdata))
