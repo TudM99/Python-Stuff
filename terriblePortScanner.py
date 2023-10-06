@@ -9,7 +9,7 @@ if len(sys.argv) == 2:
 	target = socket.gethostbyname(sys.argv[1]) #Translate hostname to IPv4
 else:
 	print("Invalid amount of arguments.")
-	print("Syntax: python3 scanner.py")
+	print("Syntax: python3 scanner.py <IP>")
 
 #Add banner
 print("-" * 50)
@@ -18,7 +18,7 @@ print("Time started: "+str(datetime.now()))
 print("-" * 50)
 
 try:
-	for port in range(50,85):
+	for port in range(1,10000):
 		s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 		socket.setdefaulttimeout(1)
 		result = s.connect_ex((target,port)) #returns an error indicator - if port is open it throws a 0, otherwise 1
